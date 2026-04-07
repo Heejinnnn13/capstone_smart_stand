@@ -1,0 +1,160 @@
+settings:
+  level: middle
+  warm_k: 2700
+  cool_k: 6500
+  pwm_max: 4095
+  lux_per_pwm: 0
+  rgb_accent_ratio: 0.05
+  high_cct_blue_boost: 0.12
+
+constraints:
+  lux_min: 300
+  lux_max: 500
+
+keywords:
+  korean:
+    - "\uad6d\uc5b4"
+    - "\uad6d \uc5b4"
+    - "\uc5b8\uc5b4"
+    - "\uc5b8 \uc5b4"
+    - "\uad6c\uc5b4"
+    - "\uad6c \uc5b4"
+    - "KOREAN"
+    - "LANGUAGE ARTS"
+
+  english:
+    - "\uc601\uc5b4"
+    - "\uc601 \uc5b4"
+    - "\uc601\ubb38"
+    - "ENGLISH"
+
+  math:
+    - "\uc218\ud559"
+    - "\uc218 \ud559"
+    - "\uc0b0\uc218"
+    - "\uae30\ud558"
+    - "\ub300\uc218"
+    - "MATH"
+    - "MATHEMATICS"
+
+  science:
+    - "\uacfc\ud559"
+    - "\uacfc \ud559"
+    - "\ud1b5\ud569\uacfc\ud559"
+    - "SCIENCE"
+
+  physics:
+    - "\ubb3c\ub9ac"
+    - "\ubb3c \ub9ac"
+    - "\ubb3c\ub9ac\ud559"
+    - "PHYSICS"
+
+  chemistry:
+    - "\ud654\ud559"
+    - "\ud654 \ud559"
+    - "CHEMISTRY"
+
+  biology:
+    - "\uc0dd\uba85"
+    - "\uc0dd \uba85"
+    - "\uc0dd\uba85\uacfc\ud559"
+    - "\uc0dd\ubb3c"
+    - "BIOLOGY"
+
+  earth_science:
+    - "\uc9c0\uad6c\uacfc\ud559"
+    - "\uc9c0\uad6c"
+    - "EARTH SCIENCE"
+
+  social:
+    - "\uc0ac\ud68c"
+    - "\uc0ac \ud68c"
+    - "SOCIAL STUDIES"
+
+  history:
+    - "\uc5ed\uc0ac"
+    - "\uc5ed \uc0ac"
+    - "\uad6d\uc0ac"
+    - "\ud55c\uad6d\uc0ac"
+    - "HISTORY"
+
+  geography:
+    - "\uc9c0\ub9ac"
+    - "\uc9c0 \ub9ac"
+    - "GEOGRAPHY"
+
+  ethics:
+    - "\ub3c4\ub355"
+    - "\uc724\ub9ac"
+    - "ETHICS"
+
+  tech_home:
+    - "\uae30\uc220\uac00\uc815"
+    - "\uae30\uc220"
+    - "\uac00\uc815"
+    - "HOME ECONOMICS"
+
+  info:
+    - "\uc815\ubcf4"
+    - "\ucef4\ud4e8\ud130"
+    - "COMPUTER"
+    - "CODING"
+
+  art:
+    - "\ubbf8\uc220"
+    - "ART"
+
+  music:
+    - "\uc74c\uc545"
+    - "MUSIC"
+
+  pe:
+    - "\uccb4\uc721"
+    - "PE"
+
+  video:
+    - "\uc778\uac15"
+    - "\uac15\uc758"
+    - "\uc601\uc0c1"
+    - "ONLINE"
+    - "LECTURE"
+
+levels:
+  elementary:
+    korean:       {cct: 4500, pwm: 2600}
+    math:         {cct: 7200, pwm: 3000}
+    science:      {cct: 6800, pwm: 2900}
+    social:       {cct: 4400, pwm: 2500}
+    art:          {cct: 2400, pwm: 2100}
+    music:        {cct: 2300, pwm: 2050}
+    pe:           {cct: 3800, pwm: 2300}
+    video:        {cct: 3400, pwm: 2200}
+
+  middle:
+    korean:       {cct: 4600, pwm: 3000}
+    english:      {cct: 4700, pwm: 3050}
+    math:         {cct: 7600, pwm: 3600}
+    science:      {cct: 7200, pwm: 3400}
+    history:      {cct: 4500, pwm: 2900}
+    geography:    {cct: 4700, pwm: 2950}
+    tech_home:    {cct: 4200, pwm: 2700}
+    art:          {cct: 2600, pwm: 2350}
+    music:        {cct: 2400, pwm: 2300}
+    pe:           {cct: 4000, pwm: 2600}
+    video:        {cct: 3500, pwm: 2400}
+
+  high:
+    korean:       {cct: 4800, pwm: 3200}
+    english:      {cct: 4900, pwm: 3250}
+    math:         {cct: 8200, pwm: 4000}
+    physics:      {cct: 8500, pwm: 3900}
+    chemistry:    {cct: 8000, pwm: 3800}
+    biology:      {cct: 7200, pwm: 3500}
+    earth_science: {cct: 7000, pwm: 3400}
+    history:      {cct: 4700, pwm: 3100}
+    geography:    {cct: 4800, pwm: 3150}
+    info:         {cct: 5600, pwm: 3350}
+    art:          {cct: 2700, pwm: 2600}
+    music:        {cct: 2500, pwm: 2550}
+    pe:           {cct: 4200, pwm: 2800}
+    video:        {cct: 3600, pwm: 2500}
