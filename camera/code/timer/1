@@ -1,0 +1,41 @@
+async def listen_and_send(websocket):
+    global current_subject, subject_start_time
+
+    while True:
+        detected_subject = detect_subject_from_camera()
+
+        # ✅ 추가: 아무것도 인식 안 되면 None 처리
+        if detected_subject is None:
+            detected_subject = None  # 과목 없음 = 조명 꺼짐
+
+        if detected_subject != current_subject:
+            now = time.time()
+
+            # 이전 과목 종료
+            if current_subject is not None:
+                elapsed = int(now - subject_start_time)
+                await websocket.send(json.dumps({
+                    "event": "subject_end",
+                    "subject": current_subject,
+                    "elapsed_seconds": elapsed,
+                    "timestamp": int(now)
+                }))
+
+            current_subject = detected_subject
+            subject_start_time = now
+
+            # ✅ 과목이 있으면 시작 / 없으면 꺼짐 이벤트
+            if detected_subject is not None:
+                await websocket.send(json.dumps({
+                    "event": "subject_start",
+                    "subject": current_subject,
+                    "timestamp": int(now)
+                }))
+                change_light(current_subject)
+            else:
+                await websocket.send(json.dumps({
+                    "event": "light_off"  # ✅ 조명 꺼짐 이벤트 추가
+                }))
+                turn_off_light()  # 기존 조명 끄는 함수
+
+        await asyncio.sleep(1)
